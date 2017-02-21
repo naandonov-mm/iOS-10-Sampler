@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fGj-kz-0m2">
+                                <rect key="frame" x="0.0" y="212" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="500389520.689726">
+                                    <!--2016-11-09 13:05:20 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule Reminder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjF-IR-xXs">
+                                <rect key="frame" x="70" y="60" width="234" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0rw-6H-2nw">
+                                <rect key="frame" x="155.5" y="451" width="64" height="30"/>
+                                <state key="normal" title="Schedule"/>
+                                <connections>
+                                    <action selector="scheduleButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrl-T7-a4N"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZjF-IR-xXs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="0gv-3o-jSp"/>
+                            <constraint firstItem="fGj-kz-0m2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Qc-pR-uyb"/>
+                            <constraint firstItem="fGj-kz-0m2" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-13.5" id="JPD-V9-8gK"/>
+                            <constraint firstItem="fGj-kz-0m2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LDI-ca-wVW"/>
+                            <constraint firstItem="ZjF-IR-xXs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PN9-nP-KYn"/>
+                            <constraint firstItem="0rw-6H-2nw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fMr-q2-igK"/>
+                            <constraint firstAttribute="trailing" secondItem="fGj-kz-0m2" secondAttribute="trailing" id="mwF-mA-H0C"/>
+                            <constraint firstItem="0rw-6H-2nw" firstAttribute="top" secondItem="fGj-kz-0m2" secondAttribute="bottom" constant="23" id="oyS-EB-Fuo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="fGj-kz-0m2" id="ZEG-HM-2BM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

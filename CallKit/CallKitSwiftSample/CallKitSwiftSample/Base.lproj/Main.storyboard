@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NFI-5B-yYP">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="D8R-Oj-2Rx">
+            <objects>
+                <navigationController id="NFI-5B-yYP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zgC-6v-hv2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Vja-4R-B9X" kind="relationship" relationship="rootViewController" id="f37-RO-47s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mXh-NI-X83" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1009" y="135"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MNS-dl-kYQ">
+            <objects>
+                <viewController id="Vja-4R-B9X" customClass="ViewController" customModule="CallKitSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o8M-O0-gUo"/>
+                        <viewControllerLayoutGuide type="bottom" id="gpP-Pt-D3j"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="07d-tL-VIf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9M-DL-FrS">
+                                <rect key="frame" x="135" y="367" width="106" height="33"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Outgoing call">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="S7e-aW-RGs" kind="show" id="fbF-fZ-h9D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kDl-qb-Pic">
+                                <rect key="frame" x="135" y="267" width="106" height="33"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Incoming call">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="1zu-fd-aaU" kind="show" id="Q2S-Dd-zK2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z9M-DL-FrS" firstAttribute="centerY" secondItem="07d-tL-VIf" secondAttribute="centerY" constant="50" id="3Ga-hM-Dks"/>
+                            <constraint firstItem="Z9M-DL-FrS" firstAttribute="centerX" secondItem="07d-tL-VIf" secondAttribute="centerX" id="Cyz-La-Dox"/>
+                            <constraint firstItem="kDl-qb-Pic" firstAttribute="centerY" secondItem="07d-tL-VIf" secondAttribute="centerY" constant="-50" id="hRw-Hs-Miy"/>
+                            <constraint firstItem="kDl-qb-Pic" firstAttribute="centerX" secondItem="07d-tL-VIf" secondAttribute="centerX" id="pIE-KG-JZe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2aW-M3-KMZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEG-lD-4pl" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="135.38230884557723"/>
+        </scene>
+        <!--Incoming Call View Controller-->
+        <scene sceneID="Ht9-dw-1oO">
+            <objects>
+                <viewController id="1zu-fd-aaU" customClass="IncomingCallViewController" customModule="CallKitSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i4R-QE-ZsZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="DEd-1m-1dR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VSS-xy-rfm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vkm-Gs-vlQ">
+                                <rect key="frame" x="26" y="128" width="323" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="6w0-od-rmv"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <connections>
+                                    <action selector="phoneNumberValueChanged:" destination="1zu-fd-aaU" eventType="editingChanged" id="kxS-Lo-vFl"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t18-ny-6Z1">
+                                <rect key="frame" x="136" y="188" width="102" height="33"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Simulate call">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KTs-mX-y8z" kind="presentation" identifier="ShowCall" id="9gr-sB-Op2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vkm-Gs-vlQ" firstAttribute="leading" secondItem="VSS-xy-rfm" secondAttribute="leadingMargin" constant="10" id="eHM-07-8tO"/>
+                            <constraint firstItem="t18-ny-6Z1" firstAttribute="centerX" secondItem="VSS-xy-rfm" secondAttribute="centerX" id="gD9-WC-c0m"/>
+                            <constraint firstItem="t18-ny-6Z1" firstAttribute="top" secondItem="vkm-Gs-vlQ" secondAttribute="bottom" constant="30" id="hag-ge-Sma"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vkm-Gs-vlQ" secondAttribute="trailing" constant="10" id="jfF-1p-zdQ"/>
+                            <constraint firstItem="vkm-Gs-vlQ" firstAttribute="top" secondItem="i4R-QE-ZsZ" secondAttribute="bottom" constant="64" id="m0b-rT-Rs2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="phoneNumberTextField" destination="vkm-Gs-vlQ" id="0Zq-3R-7Xk"/>
+                        <outlet property="simualteCallButton" destination="t18-ny-6Z1" id="wij-Mx-Hmg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B6g-3v-pxP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1340" y="-327.88605697151428"/>
+        </scene>
+        <!--Outgoing Call View Controller-->
+        <scene sceneID="nkp-E0-q6r">
+            <objects>
+                <viewController id="S7e-aW-RGs" customClass="OutgoingCallViewController" customModule="CallKitSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y3O-gq-B19"/>
+                        <viewControllerLayoutGuide type="bottom" id="fvW-09-YFA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cRm-Ah-1rF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ho9-HH-hot">
+                                <rect key="frame" x="26" y="84" width="323" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="QxT-qm-o6C"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <connections>
+                                    <action selector="phoneNumberValueChanged:" destination="S7e-aW-RGs" eventType="editingChanged" id="eXY-Vd-9BQ"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xVq-mX-yZx">
+                                <rect key="frame" x="172" y="144" width="31" height="33"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <state key="normal" title="Dial">
+                                    <color key="titleColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KTs-mX-y8z" kind="presentation" identifier="ShowDial" id="aRi-Wr-eV2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="ho9-HH-hot" secondAttribute="trailing" constant="10" id="Fwh-Pk-RG6"/>
+                            <constraint firstItem="xVq-mX-yZx" firstAttribute="top" secondItem="ho9-HH-hot" secondAttribute="bottom" constant="30" id="aHo-r0-meM"/>
+                            <constraint firstItem="ho9-HH-hot" firstAttribute="top" secondItem="Y3O-gq-B19" secondAttribute="bottom" constant="64" id="if1-Bj-mNK"/>
+                            <constraint firstItem="ho9-HH-hot" firstAttribute="leading" secondItem="cRm-Ah-1rF" secondAttribute="leadingMargin" constant="10" id="ljj-d0-T0m"/>
+                            <constraint firstItem="xVq-mX-yZx" firstAttribute="centerX" secondItem="cRm-Ah-1rF" secondAttribute="centerX" id="pOe-2L-qTk"/>
+                            <constraint firstItem="ho9-HH-hot" firstAttribute="centerX" secondItem="cRm-Ah-1rF" secondAttribute="centerX" id="q7P-bv-kIR"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="dialButton" destination="xVq-mX-yZx" id="hB7-YB-qWE"/>
+                        <outlet property="phoneNumberTextField" destination="ho9-HH-hot" id="E3g-uG-xMd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e2d-50-8Sc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1346" y="449"/>
+        </scene>
+        <!--Call View Controller-->
+        <scene sceneID="sHE-lt-IDs">
+            <objects>
+                <viewController storyboardIdentifier="CallViewController" id="KTs-mX-y8z" customClass="CallViewController" customModule="CallKitSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Y33-ys-f5W"/>
+                        <viewControllerLayoutGuide type="bottom" id="5ol-wJ-egF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BeE-M4-D5a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8u-zS-45H">
+                                <rect key="frame" x="151" y="110" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycD-O1-coP">
+                                <rect key="frame" x="134" y="187" width="106" height="43"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sEJ-gY-Fd6">
+                                <rect key="frame" x="76" y="320" width="50" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="HOLD"/>
+                                <connections>
+                                    <action selector="holdButtonTapped:" destination="KTs-mX-y8z" eventType="touchUpInside" id="QAm-5Q-gdX"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zdD-hb-StC">
+                                <rect key="frame" x="262" y="320" width="37" height="34"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                <state key="normal" title="END"/>
+                                <connections>
+                                    <action selector="endButtonTapepd:" destination="KTs-mX-y8z" eventType="touchUpInside" id="iHT-wA-vjr"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mKV-Sy-u9Z">
+                                <rect key="frame" x="158" y="80" width="59" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mKV-Sy-u9Z" firstAttribute="top" secondItem="Y33-ys-f5W" secondAttribute="bottom" constant="60" id="FSC-2t-3BB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zdD-hb-StC" secondAttribute="trailing" constant="60" id="JNE-AN-Y2X"/>
+                            <constraint firstItem="sEJ-gY-Fd6" firstAttribute="leading" secondItem="BeE-M4-D5a" secondAttribute="leadingMargin" constant="60" id="OWu-SU-m84"/>
+                            <constraint firstItem="sEJ-gY-Fd6" firstAttribute="top" secondItem="Y33-ys-f5W" secondAttribute="bottom" constant="300" id="Qi6-YL-BI9"/>
+                            <constraint firstItem="h8u-zS-45H" firstAttribute="centerX" secondItem="BeE-M4-D5a" secondAttribute="centerX" id="UOh-sB-S7i"/>
+                            <constraint firstItem="zdD-hb-StC" firstAttribute="centerY" secondItem="sEJ-gY-Fd6" secondAttribute="centerY" id="UuV-ar-mFh"/>
+                            <constraint firstItem="h8u-zS-45H" firstAttribute="top" secondItem="Y33-ys-f5W" secondAttribute="bottom" constant="90" id="YAG-e4-qO4"/>
+                            <constraint firstItem="ycD-O1-coP" firstAttribute="top" secondItem="h8u-zS-45H" secondAttribute="bottom" constant="56" id="eLg-ps-PFe"/>
+                            <constraint firstItem="mKV-Sy-u9Z" firstAttribute="centerX" secondItem="BeE-M4-D5a" secondAttribute="centerX" id="eX4-o4-sBh"/>
+                            <constraint firstItem="ycD-O1-coP" firstAttribute="centerX" secondItem="BeE-M4-D5a" secondAttribute="centerX" id="uUR-yC-WyW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="callerLabel" destination="mKV-Sy-u9Z" id="90s-Cd-6Ze"/>
+                        <outlet property="endButton" destination="zdD-hb-StC" id="5hR-h7-8LQ"/>
+                        <outlet property="holdButton" destination="sEJ-gY-Fd6" id="UjD-sE-Ecq"/>
+                        <outlet property="infoLabel" destination="h8u-zS-45H" id="Vsa-6L-h2N"/>
+                        <outlet property="timeLabel" destination="ycD-O1-coP" id="bLH-63-ady"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfu-0c-Xq1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2620" y="74.212893553223395"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9gr-sB-Op2"/>
+    </inferredMetricsTieBreakers>
+</document>

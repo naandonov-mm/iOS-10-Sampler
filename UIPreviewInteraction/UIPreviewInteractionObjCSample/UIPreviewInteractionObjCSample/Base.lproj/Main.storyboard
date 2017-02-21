@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="QHw-k5-Pyd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preview Interaction Main View Controller-->
+        <scene sceneID="eDm-UG-ZPl">
+            <objects>
+                <viewController id="QHw-k5-Pyd" customClass="PreviewInteractionMainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lNo-sm-1Q4"/>
+                        <viewControllerLayoutGuide type="bottom" id="ooJ-3I-zTH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ces-YW-UWU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peek &amp; Pop" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xh-eS-QDm">
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1xh-eS-QDm" firstAttribute="centerY" secondItem="ces-YW-UWU" secondAttribute="centerY" id="Iqz-3b-eZI"/>
+                            <constraint firstItem="1xh-eS-QDm" firstAttribute="centerX" secondItem="ces-YW-UWU" secondAttribute="centerX" id="b9g-zY-coA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="Acd-9I-epx" kind="presentation" identifier="InteractionSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="O9Y-JK-RFx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="23Q-BK-bhW" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="36"/>
+        </scene>
+        <!--Preview Interaction Pop View Controller-->
+        <scene sceneID="sQB-o2-9lT">
+            <objects>
+                <viewController id="Acd-9I-epx" customClass="PreviewInteractionPopViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K3j-CU-spy"/>
+                        <viewControllerLayoutGuide type="bottom" id="1wD-oA-U1p"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Kc-To-xgH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eGx-PC-j2e">
+                                <gestureRecognizers/>
+                            </imageView>
+                            <visualEffectView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mTk-S7-NRy">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="jpk-GH-phC">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <gestureRecognizers/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yy5-me-hMW">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLk-LH-n3m">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yy5-me-hMW" firstAttribute="top" secondItem="FLk-LH-n3m" secondAttribute="bottom" constant="10" id="1df-wZ-czr"/>
+                            <constraint firstItem="eGx-PC-j2e" firstAttribute="leading" secondItem="9Kc-To-xgH" secondAttribute="leading" id="4av-Tn-YJd"/>
+                            <constraint firstItem="eGx-PC-j2e" firstAttribute="top" secondItem="9Kc-To-xgH" secondAttribute="top" id="9HT-vP-k1Z"/>
+                            <constraint firstItem="1wD-oA-U1p" firstAttribute="top" secondItem="eGx-PC-j2e" secondAttribute="bottom" id="KNd-aa-jXP"/>
+                            <constraint firstItem="yy5-me-hMW" firstAttribute="centerX" secondItem="9Kc-To-xgH" secondAttribute="centerX" id="Q9P-dT-Acn"/>
+                            <constraint firstItem="FLk-LH-n3m" firstAttribute="centerX" secondItem="9Kc-To-xgH" secondAttribute="centerX" id="bEC-q3-J94"/>
+                            <constraint firstItem="yy5-me-hMW" firstAttribute="centerY" secondItem="9Kc-To-xgH" secondAttribute="centerY" constant="-36" id="k4l-bW-Le1"/>
+                            <constraint firstAttribute="trailing" secondItem="eGx-PC-j2e" secondAttribute="trailing" id="sQg-dC-fhW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="effectView" destination="mTk-S7-NRy" id="u9j-G2-Ynl"/>
+                        <outlet property="progressLabel" destination="yy5-me-hMW" id="Eut-Lr-any"/>
+                        <outlet property="sampleImageView" destination="eGx-PC-j2e" id="qRj-U3-UWM"/>
+                        <outlet property="statusLabel" destination="FLk-LH-n3m" id="hF0-Tk-is1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yz5-E0-rii" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sample.jpg" width="1040" height="1526"/>
+    </resources>
+</document>

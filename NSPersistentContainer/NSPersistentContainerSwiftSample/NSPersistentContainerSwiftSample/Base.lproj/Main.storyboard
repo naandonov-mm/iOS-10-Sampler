@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9AG-rZ-85w">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sample Table View-->
+        <scene sceneID="1Fd-6F-jXb">
+            <objects>
+                <tableViewController id="wcw-sO-Xq5" customClass="SampleTableViewController" customModule="NSPersistentContainerSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8Di-od-lBK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="wcw-sO-Xq5" id="1NJ-2S-zZo"/>
+                            <outlet property="delegate" destination="wcw-sO-Xq5" id="vXi-sM-vMe"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sample Table View" id="UrR-hM-8zt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UBq-Cx-nl4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="-73"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YBB-UB-XGc">
+            <objects>
+                <navigationController id="9AG-rZ-85w" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uzp-xE-XUd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wcw-sO-Xq5" kind="relationship" relationship="rootViewController" id="fUL-u9-Gjb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBS-RB-Rdy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-563" y="-73"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Preview Interaction Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PreviewInteractionMainViewController" customModule="UIPreviewInteractionSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peek &amp; Pop" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ac-ak-Rva">
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="4ac-ak-Rva" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ckw-Pg-sd1"/>
+                            <constraint firstItem="4ac-ak-Rva" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="yaY-eI-YxR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="h61-Av-x4z" kind="presentation" identifier="InteractionSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="LNj-L6-gCX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="26" y="36"/>
+        </scene>
+        <!--Preview Interaction Pop View Controller-->
+        <scene sceneID="b64-er-cac">
+            <objects>
+                <viewController id="h61-Av-x4z" customClass="PreviewInteractionPopViewController" customModule="UIPreviewInteractionSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5gG-me-nDC"/>
+                        <viewControllerLayoutGuide type="bottom" id="HRB-CL-tbz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W71-Wy-Lyb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sample.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="C1I-A4-heI">
+                                <gestureRecognizers/>
+                            </imageView>
+                            <visualEffectView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hcr-tw-fgE">
+                                <frame key="frameInset" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="5PO-Uj-bLm">
+                                    <frame key="frameInset"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <gestureRecognizers/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qdd-O3-tWL">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-zp-2QF">
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GIf-zp-2QF" firstAttribute="centerX" secondItem="W71-Wy-Lyb" secondAttribute="centerX" id="5hf-P0-AfB"/>
+                            <constraint firstItem="C1I-A4-heI" firstAttribute="leading" secondItem="W71-Wy-Lyb" secondAttribute="leading" id="FDN-Fw-TlC"/>
+                            <constraint firstItem="qdd-O3-tWL" firstAttribute="top" secondItem="GIf-zp-2QF" secondAttribute="bottom" constant="10" id="gpL-N9-XNl"/>
+                            <constraint firstAttribute="trailing" secondItem="C1I-A4-heI" secondAttribute="trailing" id="mEK-cD-8eY"/>
+                            <constraint firstItem="qdd-O3-tWL" firstAttribute="centerY" secondItem="W71-Wy-Lyb" secondAttribute="centerY" constant="-36" id="ryr-WY-3bs"/>
+                            <constraint firstItem="HRB-CL-tbz" firstAttribute="top" secondItem="C1I-A4-heI" secondAttribute="bottom" id="sOg-XZ-Bzt"/>
+                            <constraint firstItem="C1I-A4-heI" firstAttribute="top" secondItem="W71-Wy-Lyb" secondAttribute="top" id="sUd-3p-xo6"/>
+                            <constraint firstItem="qdd-O3-tWL" firstAttribute="centerX" secondItem="W71-Wy-Lyb" secondAttribute="centerX" id="xhr-sX-sc2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="effectView" destination="hcr-tw-fgE" id="tjp-SP-0Ht"/>
+                        <outlet property="progressLabel" destination="qdd-O3-tWL" id="vjh-fM-Mjk"/>
+                        <outlet property="sampleImageView" destination="C1I-A4-heI" id="s0D-8h-6O0"/>
+                        <outlet property="statusLabel" destination="GIf-zp-2QF" id="K87-YA-shB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AJ9-cI-Exu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="817" y="36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sample.jpg" width="1040" height="1526"/>
+    </resources>
+</document>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fVh-3m-0Fi">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="Fs3-dI-rgs">
+            <objects>
+                <viewController id="fVh-3m-0Fi" customClass="MainViewController" customModule="SpeechRecognitionSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dop-8a-sjl"/>
+                        <viewControllerLayoutGuide type="bottom" id="PH7-EN-my9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ee0-lW-Nvu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="RzF-bq-lKS">
+                                <rect key="frame" x="16" y="28" width="343" height="567"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjI-Jh-LGP">
+                                <rect key="frame" x="16" y="619" width="343" height="40"/>
+                                <color key="backgroundColor" red="0.16648837920000001" green="0.52587974069999999" blue="0.75460344550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="XpZ-Z9-7KL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start Recording!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recordBtnTapped" destination="fVh-3m-0Fi" eventType="touchUpInside" id="3vc-jn-gVu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RzF-bq-lKS" secondAttribute="trailing" constant="16" id="2Ku-Vm-KBK"/>
+                            <constraint firstItem="RzF-bq-lKS" firstAttribute="top" secondItem="Dop-8a-sjl" secondAttribute="bottom" constant="8" id="7h4-kq-dGc"/>
+                            <constraint firstItem="RzF-bq-lKS" firstAttribute="leading" secondItem="ee0-lW-Nvu" secondAttribute="leading" constant="16" id="Vnr-YX-TIN"/>
+                            <constraint firstAttribute="trailing" secondItem="gjI-Jh-LGP" secondAttribute="trailing" constant="16" id="ojE-sL-1Ca"/>
+                            <constraint firstItem="gjI-Jh-LGP" firstAttribute="top" secondItem="RzF-bq-lKS" secondAttribute="bottom" constant="24" id="sS4-k8-uv6"/>
+                            <constraint firstItem="PH7-EN-my9" firstAttribute="top" secondItem="gjI-Jh-LGP" secondAttribute="bottom" constant="8" id="taR-1T-TVJ"/>
+                            <constraint firstItem="gjI-Jh-LGP" firstAttribute="leading" secondItem="ee0-lW-Nvu" secondAttribute="leading" constant="16" id="w2O-Rz-5Wf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="recordBtn" destination="gjI-Jh-LGP" id="F9Q-yl-bai"/>
+                        <outlet property="textView" destination="RzF-bq-lKS" id="P3b-36-Zec"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MGR-v9-pan" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="532" y="-74.212893553223395"/>
+        </scene>
+    </scenes>
+</document>

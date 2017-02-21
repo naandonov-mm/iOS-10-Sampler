@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RBj-j4-Tc8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="9PZ-Wj-MuL">
+            <objects>
+                <viewController id="RBj-j4-Tc8" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kfr-Rc-3Sp"/>
+                        <viewControllerLayoutGuide type="bottom" id="z6K-cF-wGK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kW1-VA-Pvq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhj-fK-bIb">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="ABU-jh-vuj"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Take Live Photo" id="Pw2-ZN-FJq">
+                                        <connections>
+                                            <action selector="takeLivePhotoButtonAction:" destination="RBj-j4-Tc8" id="JZ5-DJ-dNL"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ohh-6Y-DaV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ohh-6Y-DaV" firstAttribute="top" secondItem="kW1-VA-Pvq" secondAttribute="top" id="XZ0-Y0-Iuo"/>
+                            <constraint firstAttribute="trailing" secondItem="Ohh-6Y-DaV" secondAttribute="trailing" id="aDT-EJ-DaS"/>
+                            <constraint firstItem="Ohh-6Y-DaV" firstAttribute="leading" secondItem="kW1-VA-Pvq" secondAttribute="leading" id="h2k-qK-jKP"/>
+                            <constraint firstAttribute="trailing" secondItem="dhj-fK-bIb" secondAttribute="trailing" id="iue-6M-aEs"/>
+                            <constraint firstItem="dhj-fK-bIb" firstAttribute="leading" secondItem="kW1-VA-Pvq" secondAttribute="leading" id="iv2-iz-0bh"/>
+                            <constraint firstItem="z6K-cF-wGK" firstAttribute="top" secondItem="dhj-fK-bIb" secondAttribute="bottom" id="unY-Ll-yqZ"/>
+                            <constraint firstItem="dhj-fK-bIb" firstAttribute="top" secondItem="Ohh-6Y-DaV" secondAttribute="bottom" id="z1j-pd-gua"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraOverlayView" destination="Ohh-6Y-DaV" id="gre-x9-1jw"/>
+                        <outlet property="takePhotoButton" destination="Pw2-ZN-FJq" id="0gT-ZB-LHg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2D2-JD-4ve" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>
